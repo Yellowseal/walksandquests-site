@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Barcelona Walks &amp; Quests — walking quests through Barcelona</title>
+<meta name="description" content="Pick a district, choose a theme, and walk. GPS check-ins unlock the story of each stop. 74 walking quests across 9 Barcelona districts, in 7 languages.">
+<meta name="theme-color" content="#45B5AA">
+<meta property="og:title" content="Barcelona Walks &amp; Quests">
+<meta property="og:description" content="Pick a district, choose a theme, and walk. GPS check-ins unlock the story of each stop.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://walksandquests.com">
+<style>
+  /* ---------------------------------------------------------------
+     Palette — three roles, not three decorations:
+       accent (terracotta) = action     · buttons, links
+       teal    (Pantone 15-5217 TCX Blue Turquoise, #45B5AA) = information
+                                         · step numbers, figures, markers, rules
+       neutrals                        · everything else
+     The exact Pantone sits at 2.4:1 on the light cream background, too low for
+     text, so light mode uses a darkened tone of the same hue (4.9:1) for text
+     and the exact value for fills. Dark mode uses the exact value throughout
+     (7.3:1).
+     --------------------------------------------------------------- */
+  :root {
+    --bg:#fdfbf7; --fg:#2b2320; --muted:#6d5f57; --rule:#e6ddd2;
+    --accent:#a8532a; --accent-fg:#fff; --card:#f6f0e7; --frame:#e0d5c7;
+    --teal:#45B5AA;        /* exact Pantone — fills, bars, borders */
+    --teal-text:#1F7A70;   /* darkened same hue — text on light */
+    --teal-soft:#e4f2f0;   /* tint for panels */
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#1a1614; --fg:#ece4dc; --muted:#a2938a; --rule:#332b26;
+            --accent:#d9895c; --accent-fg:#1a1614; --card:#221d1a; --frame:#2c2521;
+            --teal:#45B5AA; --teal-text:#5FC9BE; --teal-soft:#17302e; }
+  }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body {
+    margin:0; background:var(--bg); color:var(--fg);
+    font:17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust:100%;
+  }
+  .wrap { max-width:60rem; margin:0 auto; padding:0 1.25rem; }
+  a { color:var(--accent); }
+
+  /* ---------- hero ---------- */
+  header { padding:4.5rem 0 3rem; text-align:center; }
+  .mark {
+    display:inline-block; font-size:.78rem; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--teal-text); border:1px solid var(--teal); border-radius:999px;
+    padding:.3rem .85rem; margin:0 0 1.4rem;
+  }
+  h1 { font-size:clamp(2rem,6vw,3.1rem); line-height:1.08; letter-spacing:-.03em; margin:0 0 1rem; }
+  .lede { font-size:clamp(1.05rem,2.4vw,1.3rem); color:var(--muted); max-width:34rem; margin:0 auto 2rem; }
+
+  .cta { display:flex; gap:.9rem; justify-content:center; align-items:center; flex-wrap:wrap; margin-bottom:.9rem; }
+  .btn {
+    display:inline-flex; align-items:center; gap:.5rem; text-decoration:none;
+    background:var(--accent); color:var(--accent-fg); font-weight:600;
+    padding:.85rem 1.5rem; border-radius:999px; font-size:1rem;
+  }
+  .btn[aria-disabled="true"] { opacity:.55; pointer-events:none; }
+  .chip {
+    display:inline-flex; align-items:center; gap:.45rem; font-size:.92rem; color:var(--muted);
+    border:1px solid var(--rule); border-radius:999px; padding:.7rem 1.15rem;
+  }
+  .cta-note { font-size:.88rem; color:var(--muted); margin:0; }
+
+  /* ---------- screenshots ---------- */
+  .shots { display:flex; gap:1.1rem; justify-content:center; flex-wrap:wrap; padding:3rem 0 1rem; }
+  .shot {
+    width:min(15rem,42vw); aspect-ratio:9/19.5; border-radius:26px;
+    background:var(--card); border:1px solid var(--frame);
+    display:flex; align-items:center; justify-content:center;
+    color:var(--muted); font-size:.82rem; text-align:center; padding:1rem;
+    overflow:hidden;
+  }
+  .shot img { width:100%; height:100%; object-fit:cover; display:block; }
+  .shot-cap { text-align:center; color:var(--muted); font-size:.85rem; margin:.6rem 0 0; }
+
+  /* ---------- sections ---------- */
+  section { padding:3.5rem 0; border-top:1px solid var(--rule); }
+  h2 {
+    font-size:1.5rem; letter-spacing:-.02em; margin:0 0 1.2rem;
+    padding-left:.7rem; border-left:3px solid var(--teal);
+  }
+  h3 { font-size:1.05rem; margin:0 0 .35rem; }
+  p { margin:0 0 1rem; }
+  .cols { display:grid; gap:1.6rem; grid-template-columns:repeat(auto-fit,minmax(15rem,1fr)); }
+  .step-n {
+    display:inline-block; font-size:.78rem; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--teal-text); margin:0 0 .5rem; font-weight:600;
+  }
+  .card { background:var(--card); border:1px solid var(--rule); border-radius:14px; padding:1.3rem 1.4rem; }
+  .card p:last-child { margin-bottom:0; }
+  .card.info { background:var(--teal-soft); border-color:var(--teal); }
+
+  .stats { display:grid; gap:1rem; grid-template-columns:repeat(auto-fit,minmax(8rem,1fr)); margin:0; padding:0; list-style:none; }
+  .stats li { text-align:center; }
+  .stats b { display:block; font-size:2.1rem; letter-spacing:-.02em; line-height:1.1; color:var(--teal-text); }
+  .stats span { color:var(--muted); font-size:.9rem; }
+
+  ul.plain { list-style:none; padding:0; }
+  ul.plain li { padding-left:1.4rem; position:relative; margin-bottom:.55rem; }
+  ul.plain li::before { content:"›"; position:absolute; left:.3rem; color:var(--teal-text); font-weight:700; }
+
+  footer { border-top:3px solid var(--teal); padding:2.5rem 0 4rem; color:var(--muted); font-size:.92rem; }
+  footer a { color:var(--accent); }
+  .foot-row { display:flex; gap:1.2rem; flex-wrap:wrap; justify-content:space-between; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <p class="mark">Barcelona · iOS</p>
+    <h1>Walking quests through Barcelona</h1>
+    <p class="lede">Pick a district, choose what interests you, and start walking. When you reach a stop, the app checks you in and the story opens.</p>
+
+    <div class="cta">
+      <a class="btn" href="#" aria-disabled="true">Coming to the App Store</a>
+      <span class="chip">Android in preparation</span>
+    </div>
+    <p class="cta-note">Free quests to begin with — no account needed to start.</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="shots">
+    <!-- Drop screenshots into assets/ and replace the placeholder text with <img> — see assets/README.md -->
+    <div class="shot">screenshot: district map</div>
+    <div class="shot">screenshot: quest list</div>
+    <div class="shot">screenshot: compass &amp; check-in</div>
+  </div>
+  <p class="shot-cap">Choose a district · pick a theme · walk to each stop</p>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>What it is</h2>
+    <div class="cols">
+      <div>
+        <p>Most walking guides hand you a list and leave you to it. This one turns the city into a set of routes with a reason to reach the next corner.</p>
+        <p>Each quest is a themed walk through one district — Roman ruins, medieval power, the old taverns, the photogenic corners, the night. You walk it in order, and each stop unlocks when you actually get there.</p>
+      </div>
+      <div>
+        <p>Nothing is invented. Every stop was verified, and a stop earns its place only if it is worth <em>looking at</em> — not merely worth knowing about.</p>
+        <p>Finish all the stops on a quest and a bonus stop unlocks: the thing most visitors walk past without ever learning it was there.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>How it works</h2>
+    <div class="cols">
+      <div class="card">
+        <p class="step-n">Step one</p>
+        <h3>Pick a district</h3>
+        <p>Tap a district on the map. Each one has its own character, and the quests inside it complement each other rather than repeat.</p>
+      </div>
+      <div class="card">
+        <p class="step-n">Step two</p>
+        <h3>Choose a theme</h3>
+        <p>Culture, food and drink, viewpoints, hidden corners, nightlife — whatever you are in the mood for, in the district you are already standing in.</p>
+      </div>
+      <div class="card">
+        <p class="step-n">Step three</p>
+        <h3>Walk and check in</h3>
+        <p>An in-app compass points to the next stop. Arrive, check in, read the story. Your progress is saved as you go.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What is inside</h2>
+    <ul class="stats">
+      <li><b>9</b><span>districts</span></li>
+      <li><b>74</b><span>quests</span></li>
+      <li><b>347</b><span>stops</span></li>
+      <li><b>69</b><span>bonus stops</span></li>
+      <li><b>7</b><span>languages</span></li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Free to start</h2>
+    <div class="cols">
+      <div>
+        <p>Several quests are free, including a full walk through Roman Barcelona, a taste of the old city's taverns, the most photogenic corners of the Gothic Quarter, and a Gaudí walk through the Eixample.</p>
+        <p>You do not need an account to walk them. Open the app and go.</p>
+      </div>
+      <div>
+        <p>Beyond that, districts can be unlocked individually, or all at once with a whole-city bundle. These are one-time in-app purchases, not a subscription — you pay once and keep them.</p>
+        <p>Link an email at any point and your progress and purchases follow you to any device.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What it isn't</h2>
+    <p>Being clear about this up front, because it shapes what the app is good for.</p>
+    <div class="cols">
+      <div>
+        <h3>Not an audio guide</h3>
+        <p>We don't narrate the full history of every building. Each stop tells you enough to understand why you are standing in front of it, and stops there.</p>
+        <h3>Not exhaustive</h3>
+        <p>If something catches your interest, that is the point — the rest of what is known about it is a search away, and you'll find it better than we could compress it. What the app is for is knowing where to go and why it's worth the walk.</p>
+      </div>
+      <div>
+        <h3>Not sponsored</h3>
+        <p>No venue paid to be included and none can. There is no advertising, no affiliate link, no referral fee and no commercial relationship with anywhere described. Inclusion is an editorial choice and nothing else.</p>
+        <h3>Not a substitute for your own judgement</h3>
+        <p>You decide where and when to walk. The app doesn't assess whether a street, a route or a time of day is right for you — watch the city, not the phone.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Languages</h2>
+    <p>The full content — every quest, every stop, every bonus — is available in English, Spanish, French, Italian, German, Polish and Russian. Not machine output: translated with the same care as the English, with Catalan place names kept as they are.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Privacy, briefly</h2>
+    <div class="card info">
+      <p>No analytics, no advertising, no tracking. Your location is used on your device to check you in at a stop and is never stored or sent anywhere. The only thing kept about you is the list of stops you have visited. You can delete all of it from inside the app.</p>
+      <p><a href="/privacy/">Read the full privacy policy →</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="support">
+  <div class="wrap">
+    <h2>Support</h2>
+    <p>Something not working, a stop that has closed, a fact that looks wrong, or a translation that reads oddly? Write and it gets fixed — the content is maintained, not frozen.</p>
+    <ul class="plain">
+      <li><strong>Support and general enquiries:</strong> <a href="mailto:hello@walksandquests.com">hello@walksandquests.com</a></li>
+      <li><strong>Privacy and data requests:</strong> <a href="mailto:privacy@walksandquests.com">privacy@walksandquests.com</a></li>
+    </ul>
+    <p>Replies usually come within a couple of days.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-row">
+    <div>
+      <p>Barcelona Walks &amp; Quests<br>
+      Stanislav Kotyk · Manresa, Catalonia, Spain</p>
+    </div>
+    <div>
+      <p><a href="/privacy/">Privacy Policy</a> · <a href="/terms/">Terms of Use</a> · <a href="#support">Support</a></p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
