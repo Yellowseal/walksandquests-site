@@ -69,6 +69,8 @@
     padding:.85rem 1.5rem; border-radius:999px; font-size:1rem;
   }
   .btn[aria-disabled="true"] { opacity:.55; pointer-events:none; }
+  .badge-play { display:inline-flex; line-height:0; }
+  .badge-play img { height:3.5rem; width:auto; display:block; }
   .chip {
     display:inline-flex; align-items:center; gap:.45rem; font-size:.92rem; color:var(--muted);
     border:1px solid var(--rule); border-radius:999px; padding:.7rem 1.15rem;
@@ -137,13 +139,15 @@
 <a href="/ru/" hreflang="ru">Русский</a>
 </nav>
   <div class="wrap">
-    <p class="mark">Barcelona · iOS</p>
+    <p class="mark">Barcelona · Android</p>
     <h1>Walking quests through Barcelona</h1>
     <p class="lede">Pick a district, choose what interests you, and start walking. When you reach a stop, the app checks you in and the story opens.</p>
 
     <div class="cta">
+      <a class="badge-play" href="https://play.google.com/store/apps/details?id=com.walksandquests.barcelona">
+        <img src="/assets/google-play-badge.png" alt="Get it on Google Play">
+      </a>
       <a class="btn" href="#" aria-disabled="true">Coming to the App Store</a>
-      <span class="chip">Android in preparation</span>
     </div>
     <p class="cta-note">No ads, no subscription. Free quests to begin with — no account needed to start.</p>
   </div>
@@ -260,7 +264,7 @@
   <div class="wrap">
     <h2>Privacy, briefly</h2>
     <div class="card info">
-      <p>No analytics, no advertising, no tracking. Your location is used on your device to check you in at a stop and is never stored or sent anywhere. The only thing kept about you is the list of stops you have visited. You can delete all of it from inside the app.</p>
+      <p>No advertising and no third-party tracking. We do keep anonymous usage events — which quests and stops you open or finish — so we can see where people get stuck and improve the app. Your location is used on your device to check you in at a stop and is never stored or sent anywhere. You can delete everything from inside the app.</p>
       <p><a href="/privacy/">Read the full privacy policy →</a></p>
     </div>
   </div>

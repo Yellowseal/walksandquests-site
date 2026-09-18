@@ -69,6 +69,8 @@
     padding:.85rem 1.5rem; border-radius:999px; font-size:1rem;
   }
   .btn[aria-disabled="true"] { opacity:.55; pointer-events:none; }
+  .badge-play { display:inline-flex; line-height:0; }
+  .badge-play img { height:3.5rem; width:auto; display:block; }
   .chip {
     display:inline-flex; align-items:center; gap:.45rem; font-size:.92rem; color:var(--muted);
     border:1px solid var(--rule); border-radius:999px; padding:.7rem 1.15rem;
@@ -137,13 +139,15 @@
 <a href="/ru/" hreflang="ru">Русский</a>
 </nav>
   <div class="wrap">
-    <p class="mark">Barcelona · iOS</p>
+    <p class="mark">Barcelona · Android</p>
     <h1>Spacery po Barcelonie</h1>
     <p class="lede">Wybierz dzielnicę, wybierz, co cię interesuje, i rusz w drogę. Gdy dojdziesz do przystanku, aplikacja melduje cię i otwiera historię.</p>
 
     <div class="cta">
+      <a class="badge-play" href="https://play.google.com/store/apps/details?id=com.walksandquests.barcelona">
+        <img src="/assets/google-play-badge.png" alt="Pobierz z Google Play">
+      </a>
       <a class="btn" href="#" aria-disabled="true">Wkrótce w App Store</a>
-      <span class="chip">Android w przygotowaniu</span>
     </div>
     <p class="cta-note">Bez reklam, bez subskrypcji. Darmowe questy na start – bez zakładania konta.</p>
   </div>
@@ -260,7 +264,7 @@
   <div class="wrap">
     <h2>Prywatność, w skrócie</h2>
     <div class="card info">
-      <p>Bez analityki, bez reklam, bez śledzenia. Twoja lokalizacja jest używana na urządzeniu, by zameldować cię na przystanku, i nigdy nie jest zapisywana ani nigdzie wysyłana. Jedyne, co o tobie zostaje, to lista odwiedzonych przystanków. Wszystko możesz usunąć z poziomu aplikacji.</p>
+      <p>Bez reklam i bez śledzenia przez podmioty trzecie. Zapisujemy anonimowe zdarzenia użycia — które questy i przystanki otwierasz lub kończysz — aby zobaczyć, gdzie ludzie utykają, i ulepszać aplikację. Twoja lokalizacja jest używana na urządzeniu, by zameldować cię na przystanku, i nigdy nie jest zapisywana ani nigdzie wysyłana. Wszystko możesz usunąć z poziomu aplikacji.</p>
       <p><a href="/pl/privacy/">Przeczytaj pełną politykę prywatności →</a></p>
     </div>
   </div>

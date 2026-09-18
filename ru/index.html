@@ -69,6 +69,8 @@
     padding:.85rem 1.5rem; border-radius:999px; font-size:1rem;
   }
   .btn[aria-disabled="true"] { opacity:.55; pointer-events:none; }
+  .badge-play { display:inline-flex; line-height:0; }
+  .badge-play img { height:3.5rem; width:auto; display:block; }
   .chip {
     display:inline-flex; align-items:center; gap:.45rem; font-size:.92rem; color:var(--muted);
     border:1px solid var(--rule); border-radius:999px; padding:.7rem 1.15rem;
@@ -137,13 +139,15 @@
 <span class="lang-current" aria-current="page">Русский</span>
 </nav>
   <div class="wrap">
-    <p class="mark">Barcelona · iOS</p>
+    <p class="mark">Barcelona · Android</p>
     <h1>Пешие квесты по Барселоне</h1>
     <p class="lede">Выбери район, выбери то, что тебе интересно, и отправляйся. Когда доходишь до точки, приложение отмечает тебя, и открывается история.</p>
 
     <div class="cta">
+      <a class="badge-play" href="https://play.google.com/store/apps/details?id=com.walksandquests.barcelona">
+        <img src="/assets/google-play-badge.png" alt="Доступно в Google Play">
+      </a>
       <a class="btn" href="#" aria-disabled="true">Скоро в App Store</a>
-      <span class="chip">Android в подготовке</span>
     </div>
     <p class="cta-note">Без рекламы и подписки. Бесплатные квесты для старта — без регистрации.</p>
   </div>
@@ -260,7 +264,7 @@
   <div class="wrap">
     <h2>Коротко о приватности</h2>
     <div class="card info">
-      <p>Без аналитики, рекламы и слежки. Твоё местоположение используется на устройстве, чтобы отметить тебя на точке, и никогда не сохраняется и никуда не отправляется. Единственное, что о тебе хранится, — список посещённых точек. Всё это можно удалить прямо в приложении.</p>
+      <p>Без рекламы и стороннего отслеживания. Мы храним обезличенные события использования — какие квесты и точки ты открываешь или проходишь, — чтобы видеть, где люди застревают, и улучшать приложение. Твоё местоположение используется на устройстве, чтобы отметить тебя на точке, и никогда не сохраняется и никуда не отправляется. Всё это можно удалить прямо в приложении.</p>
       <p><a href="/ru/privacy/">Читать полную политику конфиденциальности →</a></p>
     </div>
   </div>

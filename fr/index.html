@@ -69,6 +69,8 @@
     padding:.85rem 1.5rem; border-radius:999px; font-size:1rem;
   }
   .btn[aria-disabled="true"] { opacity:.55; pointer-events:none; }
+  .badge-play { display:inline-flex; line-height:0; }
+  .badge-play img { height:3.5rem; width:auto; display:block; }
   .chip {
     display:inline-flex; align-items:center; gap:.45rem; font-size:.92rem; color:var(--muted);
     border:1px solid var(--rule); border-radius:999px; padding:.7rem 1.15rem;
@@ -137,13 +139,15 @@
 <a href="/ru/" hreflang="ru">Русский</a>
 </nav>
   <div class="wrap">
-    <p class="mark">Barcelona · iOS</p>
+    <p class="mark">Barcelona · Android</p>
     <h1>Balades à pied dans Barcelone</h1>
     <p class="lede">Choisissez un quartier, ce qui vous intéresse, et mettez-vous en marche. À votre arrivée à une étape, l'app vous enregistre et l'histoire s'ouvre.</p>
 
     <div class="cta">
+      <a class="badge-play" href="https://play.google.com/store/apps/details?id=com.walksandquests.barcelona">
+        <img src="/assets/google-play-badge.png" alt="Disponible sur Google Play">
+      </a>
       <a class="btn" href="#" aria-disabled="true">Bientôt sur l'App Store</a>
-      <span class="chip">Android en préparation</span>
     </div>
     <p class="cta-note">Sans publicité, sans abonnement. Des balades gratuites pour commencer, sans compte.</p>
   </div>
@@ -260,7 +264,7 @@
   <div class="wrap">
     <h2>Confidentialité, en bref</h2>
     <div class="card info">
-      <p>Pas d'analytique, pas de publicité, pas de pistage. Votre position est utilisée sur votre appareil pour vous enregistrer à une étape et n'est jamais stockée ni envoyée où que ce soit. La seule chose conservée à votre sujet est la liste des étapes visitées. Vous pouvez tout supprimer depuis l'app.</p>
+      <p>Pas de publicité et aucun pistage tiers. Nous conservons des événements d'usage anonymes — quelles quêtes et étapes vous ouvrez ou terminez — pour voir où les gens bloquent et améliorer l'app. Votre position est utilisée sur votre appareil pour vous enregistrer à une étape et n'est jamais stockée ni envoyée où que ce soit. Vous pouvez tout supprimer depuis l'app.</p>
       <p><a href="/fr/privacy/">Lire la politique de confidentialité complète →</a></p>
     </div>
   </div>

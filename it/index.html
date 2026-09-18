@@ -69,6 +69,8 @@
     padding:.85rem 1.5rem; border-radius:999px; font-size:1rem;
   }
   .btn[aria-disabled="true"] { opacity:.55; pointer-events:none; }
+  .badge-play { display:inline-flex; line-height:0; }
+  .badge-play img { height:3.5rem; width:auto; display:block; }
   .chip {
     display:inline-flex; align-items:center; gap:.45rem; font-size:.92rem; color:var(--muted);
     border:1px solid var(--rule); border-radius:999px; padding:.7rem 1.15rem;
@@ -137,13 +139,15 @@
 <a href="/ru/" hreflang="ru">Русский</a>
 </nav>
   <div class="wrap">
-    <p class="mark">Barcelona · iOS</p>
+    <p class="mark">Barcelona · Android</p>
     <h1>Passeggiate a piedi per Barcellona</h1>
     <p class="lede">Scegli un quartiere, scegli ciò che ti interessa e mettiti in cammino. Quando arrivi a una tappa, l'app ti registra e si apre la storia.</p>
 
     <div class="cta">
+      <a class="badge-play" href="https://play.google.com/store/apps/details?id=com.walksandquests.barcelona">
+        <img src="/assets/google-play-badge.png" alt="Disponibile su Google Play">
+      </a>
       <a class="btn" href="#" aria-disabled="true">Presto sull'App Store</a>
-      <span class="chip">Android in preparazione</span>
     </div>
     <p class="cta-note">Niente pubblicità, niente abbonamento. Quest gratuite per iniziare, senza bisogno di account.</p>
   </div>
@@ -260,7 +264,7 @@
   <div class="wrap">
     <h2>Privacy, in breve</h2>
     <div class="card info">
-      <p>Niente analisi, niente pubblicità, niente tracciamento. La tua posizione è usata sul dispositivo per registrarti a una tappa e non viene mai salvata né inviata da nessuna parte. L'unica cosa conservata su di te è l'elenco delle tappe visitate. Puoi cancellare tutto dall'app.</p>
+      <p>Niente pubblicità né tracciamento di terze parti. Conserviamo eventi d'uso anonimi — quali quest e tappe apri o completi — per capire dove le persone si bloccano e migliorare l'app. La tua posizione è usata sul dispositivo per registrarti a una tappa e non viene mai salvata né inviata da nessuna parte. Puoi cancellare tutto dall'app.</p>
       <p><a href="/it/privacy/">Leggi l'informativa sulla privacy completa →</a></p>
     </div>
   </div>

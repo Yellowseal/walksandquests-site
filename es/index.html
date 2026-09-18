@@ -69,6 +69,8 @@
     padding:.85rem 1.5rem; border-radius:999px; font-size:1rem;
   }
   .btn[aria-disabled="true"] { opacity:.55; pointer-events:none; }
+  .badge-play { display:inline-flex; line-height:0; }
+  .badge-play img { height:3.5rem; width:auto; display:block; }
   .chip {
     display:inline-flex; align-items:center; gap:.45rem; font-size:.92rem; color:var(--muted);
     border:1px solid var(--rule); border-radius:999px; padding:.7rem 1.15rem;
@@ -137,13 +139,15 @@
 <a href="/ru/" hreflang="ru">Русский</a>
 </nav>
   <div class="wrap">
-    <p class="mark">Barcelona · iOS</p>
+    <p class="mark">Barcelona · Android</p>
     <h1>Rutas a pie por Barcelona</h1>
     <p class="lede">Elige un distrito, elige lo que te interesa y ponte a caminar. Cuando llegas a una parada, la app te registra y se abre la historia.</p>
 
     <div class="cta">
+      <a class="badge-play" href="https://play.google.com/store/apps/details?id=com.walksandquests.barcelona">
+        <img src="/assets/google-play-badge.png" alt="Disponible en Google Play">
+      </a>
       <a class="btn" href="#" aria-disabled="true">Próximamente en la App Store</a>
-      <span class="chip">Android en preparación</span>
     </div>
     <p class="cta-note">Sin anuncios, sin suscripción. Rutas gratuitas para empezar, sin necesidad de cuenta.</p>
   </div>
@@ -260,7 +264,7 @@
   <div class="wrap">
     <h2>Privacidad, en breve</h2>
     <div class="card info">
-      <p>Sin analíticas, sin publicidad, sin rastreo. Tu ubicación se usa en tu dispositivo para registrarte en una parada y nunca se guarda ni se envía a ningún sitio. Lo único que se conserva sobre ti es la lista de paradas que has visitado. Puedes borrarlo todo desde dentro de la app.</p>
+      <p>Sin publicidad ni rastreo de terceros. Sí guardamos eventos de uso anónimos —qué misiones y paradas abres o completas— para ver dónde se atasca la gente y mejorar la app. Tu ubicación se usa en tu dispositivo para registrarte en una parada y nunca se guarda ni se envía a ningún sitio. Puedes borrarlo todo desde dentro de la app.</p>
       <p><a href="/es/privacy/">Leer la política de privacidad completa →</a></p>
     </div>
   </div>
