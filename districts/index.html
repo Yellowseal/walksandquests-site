@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Barcelona neighbourhoods: self-guided walking quests in 13 districts</title>
+<meta name="description" content="Self-guided walks through 13 Barcelona neighbourhoods — Gothic Quarter, El Born, Raval, Eixample, Gràcia, Montjuïc and more. What each district is like and where the quests lead.">
+<meta name="theme-color" content="#45B5AA">
+<link rel="canonical" href="https://walksandquests.com/districts/">
+<link rel="alternate" hreflang="en" href="https://walksandquests.com/districts/">
+<link rel="alternate" hreflang="es" href="https://walksandquests.com/es/districts/">
+<link rel="alternate" hreflang="fr" href="https://walksandquests.com/fr/districts/">
+<link rel="alternate" hreflang="it" href="https://walksandquests.com/it/districts/">
+<link rel="alternate" hreflang="de" href="https://walksandquests.com/de/districts/">
+<link rel="alternate" hreflang="pl" href="https://walksandquests.com/pl/districts/">
+<link rel="alternate" hreflang="ru" href="https://walksandquests.com/ru/districts/">
+<link rel="alternate" hreflang="x-default" href="https://walksandquests.com/districts/">
+<meta property="og:title" content="Barcelona neighbourhoods: self-guided walking quests in 13 districts">
+<meta property="og:description" content="Self-guided walks through 13 Barcelona neighbourhoods — Gothic Quarter, El Born, Raval, Eixample, Gràcia, Montjuïc and more. What each district is like and where the quests lead.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://walksandquests.com/districts/">
+<meta property="og:image" content="https://walksandquests.com/assets/discover_en.png">
+<link rel="icon" type="image/png" href="/assets/WQ_logo.png">
+<link rel="apple-touch-icon" href="/assets/WQ_logo.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://walksandquests.com/"},{"@type":"ListItem","position":2,"name":"All districts","item":"https://walksandquests.com/districts/"}]},{"@type":"ItemList","name":"Barcelona by neighbourhood","itemListElement":[{"@type":"ListItem","position":1,"name":"Gothic Quarter","url":"https://walksandquests.com/districts/gothic-quarter/"},{"@type":"ListItem","position":2,"name":"El Born","url":"https://walksandquests.com/districts/el-born/"},{"@type":"ListItem","position":3,"name":"El Raval","url":"https://walksandquests.com/districts/el-raval/"},{"@type":"ListItem","position":4,"name":"Barceloneta","url":"https://walksandquests.com/districts/barceloneta/"},{"@type":"ListItem","position":5,"name":"Eixample","url":"https://walksandquests.com/districts/eixample/"},{"@type":"ListItem","position":6,"name":"Gràcia","url":"https://walksandquests.com/districts/gracia/"},{"@type":"ListItem","position":7,"name":"Sants-Montjuïc","url":"https://walksandquests.com/districts/sants-montjuic/"},{"@type":"ListItem","position":8,"name":"Sant Martí","url":"https://walksandquests.com/districts/sant-marti/"},{"@type":"ListItem","position":9,"name":"Sarrià-Sant Gervasi","url":"https://walksandquests.com/districts/sarria-sant-gervasi/"},{"@type":"ListItem","position":10,"name":"Les Corts","url":"https://walksandquests.com/districts/les-corts/"},{"@type":"ListItem","position":11,"name":"Horta-Guinardó","url":"https://walksandquests.com/districts/horta-guinardo/"},{"@type":"ListItem","position":12,"name":"Sant Andreu","url":"https://walksandquests.com/districts/sant-andreu/"},{"@type":"ListItem","position":13,"name":"Nou Barris","url":"https://walksandquests.com/districts/nou-barris/"}]},{"@type":"MobileApplication","name":"Barcelona Walks & Quests","operatingSystem":"Android","applicationCategory":"TravelApplication","url":"https://walksandquests.com/","installUrl":"https://play.google.com/store/apps/details?id=com.walksandquests.barcelona","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}]}</script>
+<style>
+  /* ---------------------------------------------------------------
+     Palette — three roles, not three decorations:
+       accent (terracotta) = action     · buttons, links
+       teal    (Pantone 15-5217 TCX Blue Turquoise, #45B5AA) = information
+                                         · step numbers, figures, markers, rules
+       neutrals                        · everything else
+     The exact Pantone sits at 2.4:1 on the light cream background, too low for
+     text, so light mode uses a darkened tone of the same hue (4.9:1) for text
+     and the exact value for fills. Dark mode uses the exact value throughout
+     (7.3:1).
+     --------------------------------------------------------------- */
+  :root {
+    --bg:#fdfbf7; --fg:#2b2320; --muted:#6d5f57; --rule:#e6ddd2;
+    --accent:#a8532a; --accent-fg:#fff; --card:#f6f0e7; --frame:#e0d5c7;
+    --teal:#45B5AA;        /* exact Pantone — fills, bars, borders */
+    --teal-text:#1F7A70;   /* darkened same hue — text on light */
+    --teal-soft:#e4f2f0;   /* tint for panels */
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#1a1614; --fg:#ece4dc; --muted:#a2938a; --rule:#332b26;
+            --accent:#d9895c; --accent-fg:#1a1614; --card:#221d1a; --frame:#2c2521;
+            --teal:#45B5AA; --teal-text:#5FC9BE; --teal-soft:#17302e; }
+  }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body {
+    margin:0; background:var(--bg); color:var(--fg);
+    font:17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust:100%;
+  }
+  .wrap { max-width:60rem; margin:0 auto; padding:0 1.25rem; }
+  a { color:var(--accent); }
+
+  /* ---------- hero ---------- */
+  header { padding:4.5rem 0 3rem; text-align:center; }
+  .mark {
+    display:inline-block; font-size:.78rem; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--teal-text); border:1px solid var(--teal); border-radius:999px;
+    padding:.3rem .85rem; margin:0 0 1.4rem;
+  }
+  h1 { font-size:clamp(2rem,6vw,3.1rem); line-height:1.08; letter-spacing:-.03em; margin:0 0 1rem; }
+  .lede { font-size:clamp(1.05rem,2.4vw,1.3rem); color:var(--muted); max-width:34rem; margin:0 auto 2rem; }
+
+  .cta { display:flex; gap:.9rem; justify-content:center; align-items:center; flex-wrap:wrap; margin-bottom:.9rem; }
+  .btn {
+    display:inline-flex; align-items:center; gap:.5rem; text-decoration:none;
+    background:var(--accent); color:var(--accent-fg); font-weight:600;
+    padding:.85rem 1.5rem; border-radius:999px; font-size:1rem;
+  }
+  .btn[aria-disabled="true"] { opacity:.55; pointer-events:none; }
+  .badge-play { display:inline-flex; line-height:0; }
+  .badge-play img { height:3.5rem; width:auto; display:block; }
+  .brand-logo { max-width:min(20rem,70vw); height:auto; margin:0 auto 1.6rem; display:block; }
+  .chip {
+    display:inline-flex; align-items:center; gap:.45rem; font-size:.92rem; color:var(--muted);
+    border:1px solid var(--rule); border-radius:999px; padding:.7rem 1.15rem;
+  }
+  .cta-note { font-size:.88rem; color:var(--muted); margin:0; }
+
+  /* ---------- screenshots ---------- */
+  .shots { display:flex; gap:1.1rem; justify-content:center; flex-wrap:wrap; padding:3rem 0 1rem; }
+  .shot {
+    width:min(13rem,40vw); aspect-ratio:9/19.5; border-radius:26px;
+    background:var(--card); border:1px solid var(--frame);
+    display:flex; align-items:center; justify-content:center;
+    color:var(--muted); font-size:.82rem; text-align:center;
+    overflow:hidden;
+  }
+  .shot img { width:100%; height:100%; object-fit:cover; display:block; }
+  .shot-cap { text-align:center; color:var(--muted); font-size:.85rem; margin:.6rem 0 0; }
+
+  /* ---------- sections ---------- */
+  section { padding:3.5rem 0; border-top:1px solid var(--rule); }
+  h2 {
+    font-size:1.5rem; letter-spacing:-.02em; margin:0 0 1.2rem;
+    padding-left:.7rem; border-left:3px solid var(--teal);
+  }
+  h3 { font-size:1.05rem; margin:0 0 .35rem; }
+  p { margin:0 0 1rem; }
+  .cols { display:grid; gap:1.6rem; grid-template-columns:repeat(auto-fit,minmax(15rem,1fr)); }
+  .step-n {
+    display:inline-block; font-size:.78rem; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--teal-text); margin:0 0 .5rem; font-weight:600;
+  }
+  .card { background:var(--card); border:1px solid var(--rule); border-radius:14px; padding:1.3rem 1.4rem; }
+  .card p:last-child { margin-bottom:0; }
+  .card.info { background:var(--teal-soft); border-color:var(--teal); }
+
+  .stats { display:grid; gap:1rem; grid-template-columns:repeat(auto-fit,minmax(8rem,1fr)); margin:0; padding:0; list-style:none; }
+  .stats li { text-align:center; }
+  .stats b { display:block; font-size:2.1rem; letter-spacing:-.02em; line-height:1.1; color:var(--teal-text); }
+  .stats span { color:var(--muted); font-size:.9rem; }
+
+  ul.plain { list-style:none; padding:0; }
+  ul.plain li { padding-left:1.4rem; position:relative; margin-bottom:.55rem; }
+  ul.plain li::before { content:"›"; position:absolute; left:.3rem; color:var(--teal-text); font-weight:700; }
+
+  footer { border-top:3px solid var(--teal); padding:2.5rem 0 4rem; color:var(--muted); font-size:.92rem; }
+  footer a { color:var(--accent); }
+  .foot-row { display:flex; gap:1.2rem; flex-wrap:wrap; justify-content:space-between; }
+  header { position:relative; }
+  .lang-switch { display:flex; flex-wrap:wrap; gap:.3rem .65rem; font-size:.78rem; }
+  .lang-switch a { color:var(--muted); text-decoration:none; }
+  .lang-switch a:hover { color:var(--accent); }
+  .lang-switch .lang-current { color:var(--teal-text); font-weight:600; }
+  .lang-switch { position:absolute; top:1.3rem; right:1.25rem; justify-content:flex-end; max-width:12rem; }
+
+  .crumbs { font-size:.85rem; color:var(--muted); margin:0 0 1.2rem; }
+  .crumbs a { color:var(--muted); }
+  header.page { padding:4rem 0 2rem; text-align:left; }
+  header.page h1 { margin-bottom:.6rem; }
+  header.page .lede { margin:0 0 1.2rem; max-width:none; }
+  .intro { font-size:1.08rem; max-width:44rem; }
+  .facts { display:flex; flex-wrap:wrap; gap:.5rem 1.4rem; color:var(--muted); font-size:.92rem; margin:0; padding:0; list-style:none; }
+  .facts b { color:var(--teal-text); }
+  .stop h3 { margin-bottom:.2rem; }
+  .stop .from { font-size:.8rem; color:var(--muted); margin:0 0 .6rem; }
+  .stop .short { font-weight:600; }
+  .qcat { margin:1.8rem 0 .6rem; font-size:.8rem; letter-spacing:.1em; text-transform:uppercase; color:var(--teal-text); }
+  .qlist { list-style:none; margin:0; padding:0; display:grid; gap:.7rem; }
+  .qlist li { border:1px solid var(--rule); border-radius:12px; padding:.85rem 1.1rem; }
+  .qlist .qt { font-weight:600; }
+  .qlist .qs { color:var(--muted); font-size:.93rem; }
+  .qlist .qm { font-size:.82rem; color:var(--muted); }
+  .tag { display:inline-block; font-size:.72rem; font-weight:600; color:var(--teal-text); border:1px solid var(--teal); border-radius:999px; padding:.05rem .5rem; margin-left:.4rem; vertical-align:middle; }
+  .dgrid { list-style:none; margin:0; padding:0; display:grid; gap:.9rem; grid-template-columns:repeat(auto-fit,minmax(15rem,1fr)); }
+  .dgrid a { display:block; text-decoration:none; color:inherit; background:var(--card); border:1px solid var(--rule); border-radius:14px; padding:1rem 1.2rem; height:100%; }
+  .dgrid a:hover { border-color:var(--teal); }
+  .dgrid b { display:block; color:var(--fg); }
+  .dgrid span { color:var(--muted); font-size:.9rem; }
+  .dgrid .n { color:var(--teal-text); font-size:.8rem; margin-top:.3rem; display:block; }
+  .dlong p { font-size:.95rem; color:var(--fg); margin:.4rem 0 0; }
+  .cta-box { text-align:center; }
+  .cta-box .cta { margin-top:1rem; }
+  .plinks { display:flex; flex-wrap:wrap; gap:.4rem .9rem; font-size:.92rem; }
+</style>
+</head>
+<body>
+<header class="page">
+<nav class="lang-switch" aria-label="Language">
+<span class="lang-current" aria-current="page">English</span>
+<a href="/es/districts/" hreflang="es">Español</a>
+<a href="/fr/districts/" hreflang="fr">Français</a>
+<a href="/it/districts/" hreflang="it">Italiano</a>
+<a href="/de/districts/" hreflang="de">Deutsch</a>
+<a href="/pl/districts/" hreflang="pl">Polski</a>
+<a href="/ru/districts/" hreflang="ru">Русский</a>
+</nav>
+<div class="wrap">
+<p class="crumbs"><a href="/">Home</a> › All districts</p>
+<h1>Barcelona by neighbourhood</h1>
+<p class="lede">Thirteen districts, each with its own character. Here is what each one is like on foot, a few of the stops our quests lead to, and the full list of walks.</p>
+</div>
+</header>
+<section><div class="wrap"><ul class="dgrid">
+<li><a href="/districts/gothic-quarter/"><b>Gothic Quarter</b><span>Medieval heart of Barcelona</span><span class="n">11 quests</span></a></li>
+<li><a href="/districts/el-born/"><b>El Born</b><span>Trendy medieval streets</span><span class="n">10 quests</span></a></li>
+<li><a href="/districts/el-raval/"><b>El Raval</b><span>Gritty, creative, multicultural</span><span class="n">8 quests</span></a></li>
+<li><a href="/districts/barceloneta/"><b>Barceloneta</b><span>Beach &amp; seafood district</span><span class="n">8 quests</span></a></li>
+<li><a href="/districts/eixample/"><b>Eixample</b><span>Modernist grid of Gaudí</span><span class="n">10 quests</span></a></li>
+<li><a href="/districts/gracia/"><b>Gràcia</b><span>Bohemian village vibe</span><span class="n">7 quests</span></a></li>
+<li><a href="/districts/sants-montjuic/"><b>Sants-Montjuïc</b><span>Hills, gardens &amp; museums</span><span class="n">6 quests</span></a></li>
+<li><a href="/districts/sant-marti/"><b>Sant Martí</b><span>Beaches &amp; innovation district</span><span class="n">7 quests</span></a></li>
+<li><a href="/districts/sarria-sant-gervasi/"><b>Sarrià-Sant Gervasi</b><span>Elegant uptown</span><span class="n">7 quests</span></a></li>
+<li><a href="/districts/les-corts/"><b>Les Corts</b><span>Home of Camp Nou</span><span class="n">7 quests</span></a></li>
+<li><a href="/districts/horta-guinardo/"><b>Horta-Guinardó</b><span>Bunkers &amp; city views</span><span class="n">7 quests</span></a></li>
+<li><a href="/districts/sant-andreu/"><b>Sant Andreu</b><span>Historic working-class core</span><span class="n">4 quests</span></a></li>
+<li><a href="/districts/nou-barris/"><b>Nou Barris</b><span>Authentic local life</span><span class="n">3 quests</span></a></li>
+</ul></div></section>
+<section><div class="wrap cols" style="grid-template-columns:repeat(auto-fit,minmax(18rem,1fr))">
+<div class="dlong"><h3><a href="/districts/gothic-quarter/">Gothic Quarter</a></h3><p>The Gothic Quarter is the oldest part of Barcelona: the Roman colony of Barcino lies beneath its streets, and the medieval city was built on top of it. Today it is a tangle of narrow lanes between the Cathedral, Plaça de Sant Jaume and Plaça Reial. Most visitors cross it on the way to somewhere else. The quests here slow you down — Roman columns hidden in a courtyard, the lost Jewish quarter, taverns that have been pouring for a century, and the corners that look best at dusk.</p></div>
+<div class="dlong"><h3><a href="/districts/el-born/">El Born</a></h3><p>El Born — officially Sant Pere, Santa Caterina i la Ribera — was the medieval merchants’ quarter. Carrer de Montcada is a row of Gothic palaces, several of them museums today, and Santa Maria del Mar stands at the heart of it all. Around it are the Palau de la Música, the Santa Caterina market with its wavy roof and the Parc de la Ciutadella. The same narrow streets are some of the best in the city for tapas and cocktails.</p></div>
+<div class="dlong"><h3><a href="/districts/el-raval/">El Raval</a></h3><p>El Raval grew outside the medieval wall as the city’s backyard: convents, hospitals and workshops first, crowded tenements later. It is still the most mixed and least polished part of the old town — a Romanesque monastery a few streets from MACBA’s white façade, historic bohemian bars next to Pakistani grocers, the Boqueria on its edge. The quests here separate the Raval worth seeing from the Raval you simply walk through.</p></div>
+<div class="dlong"><h3><a href="/districts/barceloneta/">Barceloneta</a></h3><p>Barceloneta was laid out in the 18th century as a grid of narrow blocks for families displaced when the Ciutadella fortress was built. It became the quarter of fishermen and dockworkers, and it still eats like one: bombas, vermouth and rice by the sea. Beyond the beach itself, the quests cover the old port, the fishing wharf, the 1992 Olympic waterfront and the cable car over the harbour.</p></div>
+<div class="dlong"><h3><a href="/districts/eixample/">Eixample</a></h3><p>The Eixample is Ildefons Cerdà’s 19th-century grid — square blocks with cut corners that let in light and air. The bourgeoisie filled it with Modernista houses: Casa Batlló, La Pedrera, the Sagrada Família, and the work of Gaudí’s rivals Domènech i Montaner and Puig i Cadafalch. The quests go beyond the famous façades: gardens hidden inside the blocks, private passages, Barcelona’s Chinatown and the old-school bars of the grid.</p></div>
+<div class="dlong"><h3><a href="/districts/gracia/">Gràcia</a></h3><p>Gràcia was an independent town until 1897, and it still feels like one: low buildings, small squares and a strong local identity. The quests follow its history through the squares — Plaça de la Vila, Plaça del Diamant, Plaça del Sol — and climb to Gaudí’s first house, Casa Vicens, and to Park Güell. In the evening Gràcia fills up: vermouth bodegas, gin bars, jazz and jam sessions.</p></div>
+<div class="dlong"><h3><a href="/districts/sants-montjuic/">Sants-Montjuïc</a></h3><p>Sants-Montjuïc joins two very different worlds. Montjuïc hill was dressed up for the 1929 International Exhibition and again for the 1992 Olympics: the Magic Fountain, the Palau Nacional, the castle, and gardens with views over the port. Below it, Sants and Poble-sec are working neighbourhoods built around old textile mills — now parks, cultural centres and some of the liveliest tapas streets in the city.</p></div>
+<div class="dlong"><h3><a href="/districts/sant-marti/">Sant Martí</a></h3><p>Sant Martí takes in Poblenou, once called the Catalan Manchester for its factories and chimneys. Many of those factories are now lofts, museums and design studios, while the Torre Glòries and the new Glòries park mark the city’s newest face. Along the sea runs a string of beaches — Bogatell, Mar Bella, Llevant — opened in the run-up to the 1992 Olympics, and at night the old warehouses turn into clubs.</p></div>
+<div class="dlong"><h3><a href="/districts/sarria-sant-gervasi/">Sarrià-Sant Gervasi</a></h3><p>Sarrià-Sant Gervasi is Barcelona’s uptown: former villages and summer estates climbing towards the Collserola hills. Sarrià itself was a separate town until 1921 and still keeps its village square and market. Up here you find the lesser-known Gaudí — Bellesguard and the Teresianes school — Modernista villas, quiet gardens and, at the very top, Tibidabo with its church looking over the whole city.</p></div>
+<div class="dlong"><h3><a href="/districts/les-corts/">Les Corts</a></h3><p>Les Corts was a village of its own until the late 19th century, and today it is best known for FC Barcelona’s Camp Nou. The quests show another side: Gaudí’s wrought-iron dragon gate at the Güell estate, the royal palace gardens of Pedralbes and the Gothic monastery above them, the old farmhouse where Barça’s youth academy grew up, and the quiet squares of what remains of the village.</p></div>
+<div class="dlong"><h3><a href="/districts/horta-guinardo/">Horta-Guinardó</a></h3><p>Horta-Guinardó climbs the hills north of the centre. Old Horta was a village of farmhouses and water wells, and nearby is the Laberint d’Horta, the oldest garden in the city, with its cypress maze. Guinardó has the Sant Pau Modernista hospital and hillside parks, and the Turó de la Rovira — a civil-war anti-aircraft battery known as “the bunkers”, with one of the best all-round views of Barcelona.</p></div>
+<div class="dlong"><h3><a href="/districts/sant-andreu/">Sant Andreu</a></h3><p>Sant Andreu de Palomar was a town of its own until 1897, and its old centre still has a main street, a market and a big parish church. Industry came in the 19th century: the Fabra i Coats thread factory is now a cultural centre, and Casa Bloc, a 1930s housing block, is a landmark of modern architecture in Barcelona. On Saturdays the whole neighbourhood goes out for vermouth.</p></div>
+<div class="dlong"><h3><a href="/districts/nou-barris/">Nou Barris</a></h3><p>Nou Barris is the Barcelona most visitors never see: a district built fast in the 1950s–70s on the slopes of Collserola, where neighbours fought for every park and school. But it is older than its tower blocks — farmhouses, a village church, a 19th-century psychiatric hospital that now houses the district council, and at the city’s edge the unfinished castle of Torre Baró, with a view across all of Barcelona.</p></div>
+</div></section>
+<section><div class="wrap cta-box">
+<h2 style="display:inline-block">Walk it with the app</h2>
+<p>Pick a quest, follow the compass, check in at each stop. No account needed to start, no ads, no subscription.</p>
+<div class="cta">
+<a class="badge-play" href="https://play.google.com/store/apps/details?id=com.walksandquests.barcelona&hl=en"><img src="/assets/google-play-badge.png" alt="Google Play"></a>
+<a class="btn" href="#" aria-disabled="true">Coming to the App Store</a>
+</div>
+</div></section>
+<footer>
+<div class="wrap foot-row">
+<div><p>Barcelona Walks &amp; Quests<br>Stanislav Kotyk · Manresa, Catalonia, Spain</p></div>
+<div><p><a href="/">Home</a> · <a href="/districts/">All districts</a> · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p></div>
+</div>
+</footer>
+</body>
+</html>
